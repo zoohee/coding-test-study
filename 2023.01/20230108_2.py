@@ -14,8 +14,7 @@ for i in range(n):
         girls[g-1] += 1
     else: # 남학생
         boys[g-1] += 1
-print(girls)
-print(boys)
+
 for i in range(len(girls)):
     if girls[i] != 0:
         cnt += int(girls[i] / k) + int(girls[i] % k)

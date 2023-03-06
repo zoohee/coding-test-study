@@ -8,5 +8,5 @@ c = int(input())
  
 num = list(str(a*b*c))
 
-for i in range(len(num)):
+for i in range(10):
     print(num.count(str(i)))

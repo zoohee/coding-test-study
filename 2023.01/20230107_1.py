@@ -23,7 +23,5 @@ while i < j:
         i += 1
     else:
         j -= 1
-    print(tmp)
-    print(li)
         
 print(cnt)   

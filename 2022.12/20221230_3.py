@@ -8,3 +8,5 @@ for i in range(n):
     for j in range(i+1):
         star += "*"
     print(star)
+
+    # print((n-i-1) * " " + (i+1) * "*")
