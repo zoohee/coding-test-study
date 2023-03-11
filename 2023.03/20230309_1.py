@@ -4,16 +4,13 @@ input = sys.stdin.readline
 
 n, p = map(int, input().split())
 stack = [[] for i in range(7)]
-cnt = 1
 answer = 0
 
 for i in range(n):
+    cnt = 1
     line, plat = map(int, input().split())
     # 스택이 비어있지 않고 pop 값보다 plat이 작거나 같으면
     while(len(stack[line]) != 0 and plat <= stack[line][-1]):
-        # print(stack)
-        # if plat > stack[line][-1]:
-        #     break
         if stack[line][-1] == plat:
             cnt -= 1
         else:
@@ -22,7 +19,6 @@ for i in range(n):
     
     stack[line].append(plat)
     answer += cnt
-    cnt = 1
         
     # if not stack[line]:
     #     stack[line].append(plat)
