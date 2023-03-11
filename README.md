@@ -1,2 +1,1 @@
-# algorithm_study
-BOJ algorithm study
+# BOJ Coding Test Study 💻
