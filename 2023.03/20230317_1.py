@@ -4,8 +4,8 @@ from collections import deque
 import sys
 input = sys.stdin.readline
 
-def BFS(x y):
-    
+def BFS(x, y):
+    print("")
 
 n, m = map(int, input().split())
 visited = [[False] * m for _ in range(n)]
