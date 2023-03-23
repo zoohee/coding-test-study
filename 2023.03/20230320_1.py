@@ -29,7 +29,7 @@ def BFS():
                     if f_visited[nx][ny] == 0 or f_visited[nx][ny] > j_visited[x][y] + 1:
                         j_visited[nx][ny] = j_visited[x][y] + 1
                         j_queue.append((nx, ny))
-            else: #상하좌우 중 한 곳이 graph 밖일 때
+            else: 
                 return j_visited[x][y]
     
     return "IMPOSSIBLE"

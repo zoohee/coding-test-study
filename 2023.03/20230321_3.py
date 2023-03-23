@@ -8,13 +8,16 @@ def BFS(l, dest_x, dest_y):
     while(queue):
         x, y = queue.popleft()
         
+        # 출발, 도착지점이 같으면 return
         if x == dest_x and y == dest_y:
             return
         
+        # 여덟개의 방향으로 이동
         for i in range(8):
             nx = x + dx[i]
             ny = y + dy[i]
             
+            # 이동했을 때 목적지에 도착했으면 return
             if nx == dest_x and ny == dest_y:
                 visited[nx][ny] = visited[x][y] + 1
                 return
@@ -23,9 +26,7 @@ def BFS(l, dest_x, dest_y):
                 if visited[nx][ny] == 0:
                     visited[nx][ny] = visited[x][y] + 1
                     queue.append((nx, ny))
-                
-                
-                
+            
 n = int(input())
 
 dx = [-2, -1, 1, 2, 2, 1, -1, -2]
@@ -38,10 +39,6 @@ for i in range(n):
     
     start_x, start_y = map(int, input().split())
     dest_x, dest_y = map(int, input().split())
-    
-    # 8 / 0 0 / 7 0
-    # 8x8 사이즈 / 0,0에서 시작 / 7,0에 도착
-    # 그래프 만들기
     
     queue.append((start_x, start_y))
     visited[start_x][start_y] = 1
