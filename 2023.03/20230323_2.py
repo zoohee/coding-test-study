@@ -21,7 +21,6 @@ def BFS(i, j):
                     queue.append((nx,ny))
                     visited[nx][ny] = True
 
-
 n = int(input())
 graph = [list(input().rstrip()) for _ in range(n)]
 visited = [[False] * n for _ in range(n)]

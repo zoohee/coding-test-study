@@ -15,6 +15,7 @@ def BFS(a, b, max):
             ny = y + dy[i]
             
             if 0 <= nx < n and 0 <= ny < n:
+                # 최대 높이보다 높을 때 방문처리
                 if graph[nx][ny] > max and visited[nx][ny] == False:
                     visited[nx][ny] = True
                     queue.append((nx, ny))
