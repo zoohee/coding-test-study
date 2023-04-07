@@ -9,3 +9,9 @@ def REC(n):
 
 n = int(input())
 print(REC(n))
+
+# 재귀는 거꾸로 생각하셈
+# 이 코드 시간초과
+
+# 여기서 base condition은 
+# n >= 2 일때만 가능하다는 조건
