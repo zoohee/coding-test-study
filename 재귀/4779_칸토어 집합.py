@@ -7,6 +7,7 @@ def sol(n, i, j):
     sol(n - 1, i, i + cnt - 1)
     for k in range(i + cnt, i + cnt * 2): res[k] = ' '
     sol(n - 1, i + cnt * 2, i + cnt * 3 - 1)
+    
 while True:
     try:
         n = int(inputs())
