@@ -2,6 +2,7 @@
 # 최악시간: 
 # 난이도: 
 # Url: https://www.acmicpc.net/problem/9663
+# Reference: https://www.youtube.com/watch?v=z4wKvYdd6wM
 import sys
 input = sys.stdin.readline
 
@@ -11,7 +12,7 @@ def n_queens(col, i):
     if (promising(i, col)):
         if i == n:
             answer += 1
-            print(col[1: n+1])
+            # print(col[1: n+1])
         else:
             for j in range(1, n+1):
                 col[i+1] = j
