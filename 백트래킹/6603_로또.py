@@ -1,28 +1,21 @@
-# 시간복잡도: 
+# 시간복잡도: 순열 같은 경우 2^n 
 # 최악시간: 
-# 난이도: 
-# Url: https://www.acmicpc.net/problem/
+# 난이도: Silver 2
+# Url: https://www.acmicpc.net/problem/6603
 # Reference: 
 import sys
 input = sys.stdin.readline
 
 s = []
-def lotto( depth):
+def lotto(depth):
     if len(s) == 6:
-        print(' '.join(map(str,s)))
+        print(' '.join(map(str, s)))
         return
     
     for i in range(depth, len(arr)):
-        if len(s) == 0:
-            s.append(arr[i])
-            lotto(depth+1)
-            s.pop()
-        else:
-            if s[-1] < arr[i]:
-                s.append(arr[i])
-                lotto( depth+1)
-                s.pop()
-        
+        s.append(arr[i])
+        lotto(i+1)
+        s.pop()
 
     
 while(True):
