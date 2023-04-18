@@ -1,7 +1,7 @@
 # 시간복잡도: 
 # 최악시간: 
-# 난이도: 
-# Url: https://www.acmicpc.net/problem/
+# 난이도: Gold 4
+# Url: https://www.acmicpc.net/problem/2448
 # Reference: 
 import sys
 input = sys.stdin.readline
@@ -12,12 +12,10 @@ def REF(n):
     stars = REF(n//2)
     arr = []
     for star in stars:
-        arr.append(' '*((n//2))+star)
+        arr.append(' '*(n//2)+star+' '*(n//2))
     for star in stars:
-        arr.append(star+' '*(n//2 - 2)+star)
-    for star in stars:
-        arr.append(star)
+        arr.append(star+' '+star)
     return arr
 
 n = int(input())
-print(*REF(n), sep='\n')
+print("\n".join(REF(n)))
