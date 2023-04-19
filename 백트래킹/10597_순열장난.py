@@ -7,4 +7,5 @@ import sys
 input = sys.stdin.readline
 
 arr = list(map(str, input().rstrip()))
+visited = [False] * len(arr)
 print(arr)

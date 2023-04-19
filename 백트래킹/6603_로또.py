@@ -7,16 +7,15 @@ import sys
 input = sys.stdin.readline
 
 s = []
-def lotto(depth):
+def lotto(start):
     if len(s) == 6:
         print(' '.join(map(str, s)))
         return
     
-    for i in range(depth, len(arr)):
+    for i in range(start, len(arr)):
         s.append(arr[i])
         lotto(i+1)
         s.pop()
-
     
 while(True):
     arr = list(map(int, input().split()))

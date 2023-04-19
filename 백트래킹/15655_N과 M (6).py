@@ -1,7 +1,7 @@
 # 시간복잡도: 
 # 최악시간: 
 # 난이도: Silver 3
-# Url: https://www.acmicpc.net/problem/15654
+# Url: https://www.acmicpc.net/problem/15655
 # Reference: 
 import sys
 input = sys.stdin.readline
@@ -20,5 +20,5 @@ def sequence(start):
 
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
-arr.sort() # 오름차순
+arr.sort()
 sequence(0)
