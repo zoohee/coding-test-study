@@ -12,5 +12,10 @@
 		"prefix": "inpu",
 		"body": ["import sys",
 		"input = sys.stdin.readline"]
+	},
+
+	"code_snippets3": {
+		"prefix": "main",
+		"body": ["if __name__ == '__main__':"]
 	}
 }
