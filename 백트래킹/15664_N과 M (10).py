@@ -1,7 +1,7 @@
 # 시간복잡도: 
 # 최악시간: 
 # 난이도: Silver 2
-# Url: https://www.acmicpc.net/problem/15663
+# Url: https://www.acmicpc.net/problem/15664
 # Reference: 
 import sys
 input = sys.stdin.readline

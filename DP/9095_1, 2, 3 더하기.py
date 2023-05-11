@@ -2,11 +2,12 @@
 # 최악시간: 
 # 난이도: 
 # Url: https://www.acmicpc.net/problem/9095
-# Reference: 
+# Reference: https://yongku.tistory.com/1273
 import sys
 input = sys.stdin.readline
 
 def DP(n):
+    # n이 4 이하로 들어오면 IndexError
     d = [0] * (max(4, n+1))
     d[1] = 1
     d[2] = 2

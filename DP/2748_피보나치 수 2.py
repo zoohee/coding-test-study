@@ -2,7 +2,7 @@
 # 최악시간: 
 # 난이도: Bronze 1
 # Url: https://www.acmicpc.net/problem/2748
-# Reference: 
+# Reference: https://wook-2124.tistory.com/484
 import sys
 input = sys.stdin.readline
 

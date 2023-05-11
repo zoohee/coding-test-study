@@ -6,9 +6,6 @@
 import sys
 input = sys.stdin.readline
 
-
-# 1. 증가하면 reset
-
 n = int(input())
 arr = list(map(int, input().split()))
 seq = [1] * n

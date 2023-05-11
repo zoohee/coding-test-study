@@ -47,7 +47,7 @@ for i in range(n):
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
     
-area_list = [ for _ in range(max_height)]
+area_list = [[0] for _ in range(max_height)]
 for i in range(max_height):
     visited = [[False] * n for _ in range(n)]
     
