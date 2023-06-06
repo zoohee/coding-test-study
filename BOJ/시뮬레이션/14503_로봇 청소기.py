@@ -2,7 +2,7 @@
 # 최악시간: 
 # 난이도: Gold 5
 # Url: https://www.acmicpc.net/problem/14503
-# Reference: 
+# Reference: https://velog.io/@sin5015243/%EB%B0%B1%EC%A4%80-14503-%EB%A1%9C%EB%B4%87-%EC%B2%AD%EC%86%8C%EA%B8%B0-Python
 import sys
 input = sys.stdin.readline
 from collections import deque
@@ -10,10 +10,8 @@ from collections import deque
 def BFS(r, c, d):
     visited[r][c] = 1
     cnt = 1
-    
     while True:
         check = 0
-        
         for _ in range(4):
             d = (d+3) % 4
             nr = r + dr[d]
@@ -32,31 +30,12 @@ def BFS(r, c, d):
                 print(cnt)
                 break
             else:
-                r, c = r-dr[d], c-dc[d]     
-            
-    
-# 로봇이 반시계로 돌려면 방이 시계방향
-# 회전할 때 마다 가로 세로가 달라짐
-def rotate(a, b):
-    global robot
-    tmp = [[0] * b for _ in range(a)]
-    tmp_v = [[0] * b for _ in range(a)]
-    for i in range(b):
-        for j in range(a):
-            if robot == (b-j, i):
-                robot = (i, j)
-            tmp[i][j] = room[b-j][i]
-            tmp_v[i][j] = visited[b-j][i]
-    return tmp, tmp_v
-    
+                r, c = r-dr[d], c-dc[d]         
     
 n, m = map(int, input().split())
 r, c, d = map(int, input().split())
 room = [list(map(int, input().split())) for _ in range(n)]
 visited = [[0] * m for _ in range(n)]
-
-# dr = (0, 1, 0, -1)
-# dc = (-1, 0, 1, 0)
 
 dr = [-1, 0, 1, 0]
 dc = [0, 1, 0, -1]
@@ -66,3 +45,17 @@ BFS(r, c, d)
 # 2인 경우 남쪽, 3인 경우 서쪽
 # 0: 청소되지 않은 빈 칸, 1: 벽이 있는 칸
 # 로봇 청소기가 있는 칸은 항상 빈 칸
+
+# 로봇이 반시계로 돌려면 방이 시계방향
+# 회전할 때 마다 가로 세로가 달라짐
+# def rotate(a, b):
+#     global robot
+#     tmp = [[0] * b for _ in range(a)]
+#     tmp_v = [[0] * b for _ in range(a)]
+#     for i in range(b):
+#         for j in range(a):
+#             if robot == (b-j, i):
+#                 robot = (i, j)
+#             tmp[i][j] = room[b-j][i]
+#             tmp_v[i][j] = visited[b-j][i]
+#     return tmp, tmp_v

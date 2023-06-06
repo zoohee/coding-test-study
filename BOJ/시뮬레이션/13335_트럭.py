@@ -9,37 +9,16 @@ from collections import deque
 
 n, w, L = map(int, input().split())
 truck = list(map(int, input().split()))
-bridge = deque()
+bridge = [0] * w
+time = 0
 
-answer = 0
-cnt = 0 # 마지막 위치 기억해주기
-for i in range(n):
-    if sum(bridge)+truck[i] <= L and len(bridge) < w:
-        bridge.append(truck[i])
-        answer += 1
-        cnt += 1
-    else:
-        if sum(bridge)+truck[i] > L:    
-            while(True):
-                if sum(bridge)+truck[i] <= L:
-                    break
-                bridge.popleft()
-            answer += w-cnt+1
-            cnt = w-cnt+1
-        else:
-            while(True):
-                if len(bridge) < w:
-                    break
-                bridge.popleft()
-                # answer += 1
-            answer += cnt
-        bridge.append(truck[i])
-        cnt += 1
-    # print(answer)
+while bridge:
+    time += 1
+    bridge.pop(0) # 0번째 탈출
+    if truck:
+        if sum(bridge) + truck[0] <= L: # 최대 무게 안 넘으면
+            bridge.append(truck.pop(0))
+        else: # 넘으면 0 추가
+            bridge.append(0) 
 
-while(len(bridge)==0):
-    bridge.popleft()
-    answer += 1
-    
-# answer += cnt
-print(answer)
+print(time)
