@@ -42,9 +42,7 @@ while(True):
     if time in d.keys():
         if d[time] == "D":
             direction = (direction+1)%4
-            print("D")
         else:
-            print("L")
             if direction == 0:
                 direction = 3
             else:
