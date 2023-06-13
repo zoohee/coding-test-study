@@ -2,7 +2,8 @@
 # 최악시간: 
 # 난이도: 
 # Url: https://www.acmicpc.net/problem/3190
-# Reference: 
+# Reference: https://great-park.tistory.com/104
+# PyPy3만 통과
 import sys
 input = sys.stdin.readline
 from collections import deque
@@ -14,6 +15,7 @@ def count_element(matrix, target):
 def BFS():
     queue = deque()
     new_graph = copy.deepcopy(graph)
+    
     for i in range(N):
         for j in range(M):
             if new_graph[i][j] == 2:
@@ -26,22 +28,21 @@ def BFS():
             nx = x + dx[i]
             ny = y + dy[i]
             
-            if 0 <= nx < N and 0 <= ny < N:
+            if 0 <= nx < N and 0 <= ny < M:
                 if new_graph[nx][ny] == 0:
                     new_graph[nx][ny] = 2 # 바이러스 퍼짐
                     queue.append((nx, ny))
                     
     global result
     cnt = 0
-    # cnt = count_element(new_graph, 0)
-    for i in range(N):
-        cnt += new_graph[i].count(0)
+    cnt = count_element(new_graph, 0)
     result = max(result, cnt)
 
 def make_wall(count):
     if count == 3:
         BFS()
         return
+    
     for i in range(N):
         for j in range(M):
             if graph[i][j] == 0:
