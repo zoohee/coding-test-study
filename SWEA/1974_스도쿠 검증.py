@@ -1,10 +1,9 @@
 # 시간복잡도: 
 # 최악시간: 
-# 난이도: 
+# 난이도: D2
 # Url: https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AYj2mga6ZewDFASl&contestProbId=AV5Psz16AYEDFAUq&probBoxId=AYj2nEQ6ZfkDFASl&type=PROBLEM&problemBoxTitle=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98+Track+%28%EB%82%9C%EC%9D%B4%EB%8F%84+%EC%A4%91%29&problemBoxCnt=5
-# Reference: 
+# Reference: Me
 t = int(input())
-
 for test in range(1, t+1):
     answer = 1
     sudoku = [list(map(int, input().split())) for _ in range(9)]
@@ -28,7 +27,6 @@ for test in range(1, t+1):
                         square[index] = sudoku[k][l]
                         index += 1
                 if len(square) != len(set(square)):
-                    print(3)
                     answer = 0
     print("#"+str(test)+" "+str(answer))
     

@@ -1,10 +1,8 @@
 # 시간복잡도: 
 # 최악시간: 
-# 난이도: 
-# Url: 
-# Reference: 
-import sys
-input = sys.stdin.readline
+# 난이도: D2
+# Url: https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AYj2mga6ZewDFASl&contestProbId=AXuARWAqDkQDFARa&probBoxId=AYj2nEQ6ZfkDFASl&type=USER&problemBoxTitle=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98+Track+%28%EB%82%9C%EC%9D%B4%EB%8F%84+%EC%A4%91%29&problemBoxCnt=5
+# Reference: https://tarra.tistory.com/entry/SW-Expert-Academy-12712-%ED%8C%8C%EB%A6%AC%ED%87%B4%EC%B9%983
 
 t = int(input())
 
@@ -36,33 +34,3 @@ for test in range(t):
             tmp = max(answer1, answer2)
             answer = max(tmp, answer)
     print("#"+str(test+1)+" "+str(answer))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # answer = 0
-    # center = n//2
-    # answer1 = graph[center][center]
-    # answer2 = graph[center][center]
-    # print(answer1)
-    # for i in range(m):
-    #     w, x, y, z = center
-    #     for j in range(4):
-    #         nw = w + (i+1) * dw[j]
-    #         nx = x + (i+1) * dx[j]
-    #         answer1 += graph[nw][nx]
-    #         print(answer1)
-    #         answer2 += graph[center+dy[j]][center+dz[j]]
-
-    
