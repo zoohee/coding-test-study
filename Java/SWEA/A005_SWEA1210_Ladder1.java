@@ -1,7 +1,9 @@
+package Java.SWEA;
+
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class A005_SWEA1210_Ladder1 {
 
 	public static void main(String[] args) throws Exception {
 		// System.setIn(new FileInputStream("input004.txt"));
