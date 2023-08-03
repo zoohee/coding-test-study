@@ -1,3 +1,5 @@
+package SWEA;
+
 import java.util.*;
 
 public class B002_SWEA1954_달팽이숫자 {

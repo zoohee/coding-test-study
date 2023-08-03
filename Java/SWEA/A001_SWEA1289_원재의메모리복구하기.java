@@ -1,6 +1,8 @@
+package SWEA;
+
 import java.util.Scanner;
 
-public class Solution {
+public class A001_SWEA1289_원재의메모리복구하기 {
 
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
