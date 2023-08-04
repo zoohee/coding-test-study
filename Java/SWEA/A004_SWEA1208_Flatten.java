@@ -1,7 +1,9 @@
+package SWEA;
+
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class A004_SWEA1208_Flatten {
 
 	public static void main(String[] args) throws Exception {
 		// System.setIn(new FileInputStream("input004.txt"));

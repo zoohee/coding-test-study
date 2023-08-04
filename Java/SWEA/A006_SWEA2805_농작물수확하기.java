@@ -1,3 +1,5 @@
+package SWEA;
+
 import java.io.*;
 
 public class A006_SWEA2805_농작물수확하기 {
