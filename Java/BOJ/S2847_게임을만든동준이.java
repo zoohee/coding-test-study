@@ -2,7 +2,7 @@ package BOJ;
 
 import java.io.*;
 
-public class _2847_게임을만든동준이 {
+public class S2847_게임을만든동준이 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());

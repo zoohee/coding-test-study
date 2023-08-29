@@ -3,7 +3,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class _1525_퍼즐 {
+public class S1525_퍼즐 {
 	static String correct = "123456780";
 	static Map<String, Integer> map = new HashMap<>();
 	static int dx[] = {1, 0, -1, 0};

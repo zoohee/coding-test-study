@@ -1,9 +1,9 @@
-package Java.BOJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
-public class _1260_DFS와BFS {
+public class S1260_DFS와BFS {
 	static StringBuilder sb = new StringBuilder();
 	static boolean[] check;
 	static int[][] arr;

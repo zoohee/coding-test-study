@@ -1,7 +1,9 @@
+package BOJ;
+
 import java.io.*;
 import java.util.*;
 
-public class _1240_노드사이의거리 {
+public class S1240_노드사이의거리 {
 	private static ArrayList<int[]>[] nodes;
 	private static boolean[] visited;
 	private static int[] answer;
