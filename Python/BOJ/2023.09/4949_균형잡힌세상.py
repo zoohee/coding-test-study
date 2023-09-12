@@ -18,6 +18,10 @@ while(True):
                     stack.pop()
                 elif s[i]==')' and stack[-1]=='(':
                     stack.pop()
+                else:
+                    print("no")
+                    stack.clear()
+                    break
             else:
                 print("no")
                 stack.clear()

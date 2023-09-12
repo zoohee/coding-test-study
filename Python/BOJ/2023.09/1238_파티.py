@@ -25,13 +25,16 @@ def dijkstra(start):
 
 N, M, X = map(int, input().split())
 graph = [[] for _ in range(N+1)]
+reverse_graph = [[] for _ in range(N+1)]
 
 for _ in range(M):
     start, end, w = map(int, input().split())
     graph[start].append((end, w))
+    reverse_graph[end].append((start, w))
     
 answer = 0
 back = dijkstra(X)
+go = dijkstra(X)
 for i in range(1, N+1):
     go = dijkstra(i)
     answer = max(answer, go[X] + back[i])
