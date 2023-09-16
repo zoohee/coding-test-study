@@ -6,8 +6,6 @@
 # 메모리 : 201996kb
 # 실행시간 : 1804ms
 
-answer = set()
-
 test_case = int(input())
 for t in range(test_case):
     n, m = map(int, input().split())
