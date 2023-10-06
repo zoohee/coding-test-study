@@ -2,43 +2,42 @@ import sys
 input = sys.stdin.readline
 from collections import deque
 
-def bfs(graph, start, end):
-    n = len(graph)
-    visited = [False] * n
-
-    queue = deque()
-    queue.append(start)
+def dfs_greater(graph, start, visited):
     visited[start] = True
-    
-    while queue:
-        node = queue.popleft()
-        for neighbor in range(n):
-            if not visited[neighbor] and graph[node][neighbor] == 1:
-                if neighbor == end:
-                    return True
-                queue.append(neighbor)
-                visited[neighbor] = True
-    
-    return False
+    count = 1
+    for i in range(len(graph)):
+        if not visited[i] and graph[start][i] == 1:
+            count += dfs_greater(graph, i, visited)
+    return count
 
-T = int(input())
-for t in range(T):
-    n = int(input())
-    m = int(input())
-    graph = [[0] * (n+1) for _ in range(n+1)]
+def dfs_smaller(graph, start, visited):
+    visited[start] = True
+    count = 1
+    for i in range(len(graph)):
+        if not visited[i] and graph[i][start] == 1:
+            count += dfs_smaller(graph, i, visited)
+    return count
+
+T = int(input().strip())
+for t in range(1, T+1):
+    n = int(input().strip())
+    m = int(input().strip())
+    
+    # 그래프 초기화
+    graph = [[0] * n for _ in range(n)]
+    
     for _ in range(m):
         a, b = map(int, input().split())
-        graph[a][b] = 1
-    print(graph)
-    ans = 0
-    # 모든 정점이 한 정점과 인접하거나 지나갈 수 있으면 카운트하기
-    for i in range(1, n+1):
-        cnt = 0
-        for j in range(i, n+1):
-            if bfs(graph, j, i):
-                cnt += 1
-        if cnt == n:
-            ans += 1
+        graph[a-1][b-1] = 1
     
-    print(ans)
-
+    result = 0
+    
+    for i in range(n):
+        visited = [False] * n
+        greater_count = dfs_greater(graph, i, visited) - 1  # 자기 자신은 빼기
+        visited = [False] * n
+        smaller_count = dfs_smaller(graph, i, visited) - 1  # 자기 자신은 빼기
+        if greater_count + smaller_count == n - 1:
+            result += 1
+    
+    print("#{} {}".format(t, result))
