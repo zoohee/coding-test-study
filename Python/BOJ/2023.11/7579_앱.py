@@ -28,12 +28,13 @@ for i in range(1, n+1):
             
         if dp[i][j] >= m: # M바이트 확보 조건 충족
             answer = min(j, answer)
+        
+        if j==1:
+            print(dp)
 
             
 if m==0:
     print(0)
 else:
-    if cnt>1:
-        print(answer-cnt+1)
-    else:
+
         print(answer)
