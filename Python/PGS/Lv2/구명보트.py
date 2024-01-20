@@ -22,3 +22,4 @@ def solution(people, limit):
 
 # 정확도 테스틑 모두 통과하나, 효율성 통과 못함
 # remove() 사용하지 않고 다시 풀기
+# 다시 풀기..
