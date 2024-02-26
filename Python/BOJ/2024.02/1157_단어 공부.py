@@ -1,8 +1,8 @@
-# 실행시간: ms
-# 메모리: KB
+# 실행시간: 288ms
+# 메모리: 33076KB
 # 난이도: Bronze 1
-# Url: https://www.acmicpc.net/problem/
-# Reference: 
+# Url: https://www.acmicpc.net/problem/1157
+# Reference: me
 import sys
 input = sys.stdin.readline
 
@@ -14,14 +14,13 @@ for word in words:
     word = word.upper()
     dict[word] += 1
 
-# 여기서 최대값이 여러개인것만 걸러내기
 max_value = max(dict.values())
 ans = 0
 key = ""
-for i in range(26):
-    if max_value:
+for k in dict.keys():
+    if max_value == dict.get(k):
         ans += 1
-        key = list(dict.keys())[i]
+        key = k
 
     if ans > 1:
         print("?")
