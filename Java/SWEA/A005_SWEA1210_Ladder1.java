@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-package SWEA;
-=======
-package Java.SWEA;
->>>>>>> 2060fa1c68754d46a6f20c35c00ba859fbcb2b30
 
 import java.io.*;
 import java.util.*;

@@ -1,7 +1,7 @@
 package PGS.Lv1;
 import java.util.*;
 
-public class Solution {
+public class 같은_숫자는_싫어 {
     public List<Integer> solution(int []arr) throws Exception {
         List<Integer> answer = new ArrayList<>();
         int tmp = arr[0];
