@@ -176,3 +176,7 @@ Temporary Items
 *.DS_Store
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij,java
+
+/out
+/.idea
+/.vscode
