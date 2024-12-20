@@ -1,4 +1,4 @@
-package SWEA;
+package BOJ;
 
 import java.util.Scanner;
 
